@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 
+//apply from: "${rootProject.projectDir}/nexus-scripts/upload.gradle"
+
 def getConfigProperty(String configName) {
     def versionPropsFile = file('config.properties')
     def versionProps = new Properties()

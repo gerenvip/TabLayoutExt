@@ -8,3 +8,5 @@
 /captures
 .externalNativeBuild
 .idea/
+/nexus-scripts
+./nexus-scripts
