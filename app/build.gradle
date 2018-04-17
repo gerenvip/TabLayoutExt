@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION as String
+    defaultConfig {
+        applicationId "com.suapp.ui.tablayout"
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    implementation "com.android.support.constraint:constraint-layout:1.0.2"
+    implementation "com.android.support:design:$ANDROID_SUPPORT_VERSION"
+    implementation project(':tablayout_ext_lib')
+}

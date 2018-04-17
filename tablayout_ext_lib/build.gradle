@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+def getConfigProperty(String configName) {
+    def versionPropsFile = file('config.properties')
+    def versionProps = new Properties()
+    versionProps.load(versionPropsFile.newReader())
+    return versionProps.getProperty(configName)
+}
+
+def COMPILE_SDK_VERSION = hasProperty('COMPILE_SDK_VERSION') ? property('COMPILE_SDK_VERSION') : getConfigProperty('COMPILE_SDK_VERSION')
+def BUILD_TOOLS_VERSION = hasProperty('BUILD_TOOLS_VERSION') ? property('BUILD_TOOLS_VERSION') : getConfigProperty('BUILD_TOOLS_VERSION')
+def MIN_SDK_VERSION = hasProperty('MIN_SDK_VERSION') ? property('MIN_SDK_VERSION') : getConfigProperty('MIN_SDK_VERSION')
+def TARGET_SDK_VERSION = hasProperty('TARGET_SDK_VERSION') ? property('TARGET_SDK_VERSION') : getConfigProperty('TARGET_SDK_VERSION')
+def ANDROID_SUPPORT_VERSION = hasProperty('ANDROID_SUPPORT_VERSION') ? property('ANDROID_SUPPORT_VERSION') : getConfigProperty('ANDROID_SUPPORT_VERSION')
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION as String
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION as int
+        targetSdkVersion TARGET_SDK_VERSION as int
+        versionCode 1
+        versionName "1.0"
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+}

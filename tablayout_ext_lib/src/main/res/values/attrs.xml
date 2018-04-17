@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabItemExt">
+        <attr name="android:text" />
+        <attr name="android:icon" />
+        <attr name="android:layout" />
+    </declare-styleable>
+
+    <declare-styleable name="TabLayoutExt">
+        <!--指示器在顶部 而非底部,仅 STYLE_NORMAL 和 STYLE_DRAWABLE 生效-->
+        <attr name="tabIndicatorFixedTop" format="boolean" />
+        <!--指示器颜色,在 STYLE_BLOCK 模式下 还用来渲染 滑块的颜色，一般需要设置透明度-->
+        <attr name="tabIndicatorColor" format="color" />
+        <!--设置指示器的高度 在 STYLE_NORMAL 样式下 控制 底部下划线的高度,但在 STYLE_BLOCK 样式下控制 滑块的高度-->
+        <attr name="tabIndicatorHeight" format="dimension" />
+        <!--设置 指示器的额外 padding值，只在 TAB_INDICATOR_WRAP 模式 和 STYLE_NORMAL 样式下生效-->
+        <attr name="tabIndicatorAdditionalPadding" format="dimension" />
+        <!--设置指示器拒顶部的间距，只在 {@link #TAB_INDICATOR_WRAP}模式+{@link #STYLE_NORMAL}样式下生效-->
+        <attr name="tabIndicatorMarginTop" format="dimension" />
+        <!--控制指示器距底部的间距，只在{@link #TAB_INDICATOR_FILL}模式 或{@link #STYLE_DRAWABLE}样式下生效
+        在 {@link #TAB_INDICATOR_FILL}模式 控制 下滑线距底部的间距,
+        在 {@link #STYLE_DRAWABLE}样式下 控制自定义的 指示器图片距底部的间距,注意 为了保证 drawable 样式的指示器能显示完全，如果tabIndicatorMarginBottom设置的太大， drawable 会缩小，缩小到一定程度会不可见
+        -->
+        <attr name="tabIndicatorMarginBottom" format="dimension" />
+        <!--控制是否固定指示器的宽度，指示器的宽度和 tab 的宽度相关,所以在 MODE_FIXED 模式下 宽度是固定的，在 MODE_SCROLLABLE 模式下，并不能做到真正的固定大小
+        如果要打到固定宽的需求，可以给 tab 设置 miniWidth ，只要 miniWidth 不小于 tabIndicatorFixedWidth 的值 ，指示器的宽度就固定了。
+        -->
+        <attr name="tabIndicatorWidthFixed" format="boolean" />
+        <!--设置指示器的固定宽度,只有在 tabIndicatorWidthFixed 为 true 时 才生效。设置 tabIndicatorFixedWidth 后 指示器会尽力使用设置的宽度;
+        但 不是一定是这样的，比如 其中一个 tab 的width 很小，远小于tabIndicatorFixedWidth ，在该情况下指示器的宽度最多是 该 tab 的宽度,不过您可以设置 miniWidth
+        来设置 tab 的最小宽度 大于 给定的 tabIndicatorFixedWidth，如此下来 指示器的宽度就可以保持指定的宽度-->
+        <attr name="tabIndicatorFixedWidth" format="dimension" />
+        <!--在 STYLE_BLOCK 样式下 左右间距,在其他样式下无效-->
+        <attr name="tabIndicatorBlockStyleHorizontalMargin" format="dimension" />
+        <!--指示器的圆角角度设置， 当 STYLE_NORMAL 样式时 该属性 让 底部指示线 左右两端有圆角效果，当在 STYLE_BLOCK 模式下 该属性让 滑块 具有圆弧角度，其他样式下无效-->
+        <attr name="tabIndicatorCornerRadius" format="dimension" />
+        <!--在 STYLE_DRAWABLE 样式下 必须要设置该属性 给一个自定义的指示器图标，否则指示器是空白的，drawable 可以是 shape 图也可以是普通的png 图，注意如果图片过大的话会被压缩-->
+        <attr name="tabIndicatorDrawable" format="reference" />
+        <!--给 整个 TabLayoutExt 的内容的左边加一个 padding 值,相当于从第一个tab 开始向右偏移给定的距离,需要注意的是 它会和 tabPaddingStart 中和-->
+        <attr name="tabContentStart" format="dimension" />
+        <!--每个tab 的背景色-->
+        <attr name="tabBackground" format="reference" />
+        <attr name="tabMode">
+            <enum name="scrollable" value="0" />
+            <enum name="fixed" value="1" />
+        </attr>
+        <attr name="tabGravity">
+            <enum name="fill" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+        <!--指示器 mode,-->
+        <attr name="indicatorMode">
+            <!--wrap 模式，该模式下 下划线指示器 的宽度是tab 内容的宽度(customView 的tab 由于无法获取其内容的宽度，所以默认是customView的宽度)
+            注意，注意 只在 STYLE_NORMAL 样式小生效-->
+            <enum name="wrap" value="0" />
+            <!--fill 模式，在该模式下 指示器的宽度和tab 的宽度相同，除非您 设置了 tabIndicatorWidthFixed 为 true-->
+            <enum name="fill" value="1" />
+        </attr>
+        <!--tab 中包含 icon 和 text，默认情况下 icon 在上，text 在小，不过可以设置成 horizontal 让icon 在左，text在右-->
+        <attr name="tabOrientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="tabIndicatorStyle">
+            <enum name="none" value="-1" />
+            <enum name="normal" value="0" />
+            <enum name="block" value="1" />
+            <enum name="drawable" value="2" />
+        </attr>
+        <!--tab 的最小宽度，合理设置该值 可以和 tabIndicatorFixedWidth 配合 实现 指示器宽度一致 -->
+        <attr name="tabMinWidth" format="dimension" />
+        <attr name="tabMaxWidth" format="dimension" />
+        <attr name="tabTextAppearance" format="reference" />
+        <attr name="tabTextColor" format="color" />
+        <attr name="tabSelectedTextColor" format="color" />
+        <attr name="tabPaddingStart" format="dimension" />
+        <attr name="tabPaddingTop" format="dimension" />
+        <attr name="tabPaddingEnd" format="dimension" />
+        <attr name="tabPaddingBottom" format="dimension" />
+        <attr name="tabPadding" format="dimension" />
+
+        <!--tab 中 icon 和 text 自己的间距-->
+        <attr name="tabTextIconGap" format="dimension" />
+        <!--tab 中icon 颜色渲染-->
+        <attr name="tabIconTint" format="color" />
+        <!--tab 选中状态 的渲染色-->
+        <attr name="tabSelectedIconTint" format="color" />
+    </declare-styleable>
+
+    <!--tab item text 支持的 属性-->
+    <declare-styleable name="TabTextAppearance">
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:textColorHint" />
+        <attr name="android:textColorLink" />
+        <attr name="android:textStyle" />
+        <attr name="android:typeface" />
+        <attr name="android:fontFamily" />
+        <attr name="fontFamily" />
+        <attr name="textAllCaps" />
+        <attr name="android:shadowColor" />
+        <attr name="android:shadowDy" />
+        <attr name="android:shadowDx" />
+        <attr name="android:shadowRadius" />
+    </declare-styleable>
+
+    <declare-styleable name="TipsMsgView">
+        <!-- 圆角矩形背景色 -->
+        <attr name="tips_backgroundColor" format="color" />
+        <!-- 圆角弧度,单位dp-->
+        <attr name="tips_cornerRadius" format="dimension" />
+        <!-- 圆角弧度,单位dp-->
+        <attr name="tips_strokeWidth" format="dimension" />
+        <!-- 圆角边框颜色-->
+        <attr name="tips_strokeColor" format="color" />
+        <!-- 圆角弧度是高度一半-->
+        <attr name="tips_isRadiusHalfHeight" format="boolean" />
+        <!-- 圆角矩形宽高相等,取较宽高中大值-->
+        <attr name="tips_isWidthHeightEqual" format="boolean" />
+    </declare-styleable>
+</resources>

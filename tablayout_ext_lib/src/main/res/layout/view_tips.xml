@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gerenvip.ui.tablayout.TipsMsgView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:maxLines="1"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    app:tips_backgroundColor="#FD481F"
+    app:tips_isRadiusHalfHeight="false"
+    app:tips_strokeColor="#ffffff"
+    app:tips_strokeWidth="1dp" />
