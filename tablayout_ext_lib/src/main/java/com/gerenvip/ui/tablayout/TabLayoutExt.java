@@ -52,6 +52,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.gerenvip.ui.tablayout.R
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
