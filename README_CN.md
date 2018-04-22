@@ -49,7 +49,7 @@ mTabLayout.addTab(mTabLayout.newTab().setText("菜单2"));
 
 ```
 
-##特殊效果用法api
+## 特殊效果用法api
 ```java
 
 // TabLayoutExt.MODE_FIXED：固定模式, 宽度由最宽的一个标签确定，并且所有Tab平分宽度
@@ -91,7 +91,7 @@ mTabLayout.getTabAt(4).setCustomView(R.layout.view_custom);
 
 > xml中的相关使用，可以参考attr中的注释
 
-##简单demo
+## 简单demo
 
 ```java
 // 填充Tab中title式的指示器，并在0位置的Tab中增加一个黑色背景，红色title颜色的角标，String为10
