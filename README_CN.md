@@ -32,16 +32,16 @@
 5.支持设置红点间距
 6.支持动态隐藏红点
 ```
-##### 4. design 包中的原有功能全部保留下来
+##### 4. `design` 包中的原有功能全部保留下来
 
-**注意变更：** design 包中的 TabItem 需要替换为 TabItemExt  
+**注意变更：** `design` 包中的 `TabItem` 需要替换为 `TabItemExt`  
 
 
 ## 使用方式说明
 
-##### layout中捆绑 ViewPager 使用
+##### `layout`中捆绑 `ViewPager` 使用
 
-此种写法，不需要在java中显示的调用setupWithViewPager，等相关绑定title的操作，不需要额外的操作。
+此种用法，不需要在代码中显示的调用 `setupWithViewPager`。
 
 ```xml
 <android.support.v4.view.ViewPager
@@ -86,7 +86,7 @@ mTabLayout.addTab(mTabLayout.newTab().setText("Menu2"));
 mTabLayout.setupWithViewPager(mPager);
 ```
 
-#### 指示器扩展使用方式
+#### 新特性使用方式
 
 ```java
 //1.修改指示器样式
@@ -94,38 +94,44 @@ mTabLayout.setupWithViewPager(mPager);
 // TabLayoutExt.STYLE_BLOCK：滑块式指示器
 // TabLayoutExt.STYLE_DRAWABLE：自定义图片指示器
 mTabLayout.setIndicatorStyle(TabLayoutExt.STYLE_NORMAL);
+//attr app:tabIndicatorStyle="normal"
 
 //2.自定义指示器图片
 // TabLayoutExt.STYLE_DRAWABLE模式下，设置资源Id
 mTabLayout.setIndicatorStyle(TabLayoutExt.STYLE_DRAWABLE);
-mTabLayout.setIndicatorDrawable(R.mipmap.ic_launcher);
+mTabLayout.setIndicatorDrawable(R.mipmap.ic_indicator_1);
+//attr app:tabIndicatorDrawable="@mipmap/ic_indicator_1"
 
 //3.自定义指示器高度
 // 只会影响STYLE_BLOCK / STYLE_NORMAL模式的高度
 mTabLayout.setSelectedTabIndicatorHeight(20);
+//attr app:tabIndicatorHeight="2dp"
 
 //4.修改指示器模式
 // TabLayoutExt.TAB_INDICATOR_FILL：默认下划线填充模式（占满整个Tab宽度）
 // TabLayoutExt.TAB_INDICATOR_WRAP：wrap下划线填充模式（和Tab内容宽度相同）只会影响STYLE_BLOCK / STYLE_NORMAL模式
 mTabLayout.setTabIndicatorMode(TabLayoutExt.TAB_INDICATOR_WRAP);
+//attr app:indicatorMode="wrap" //fill
 
 //5.修改指示器的Top间距
 //只在TAB_INDICATOR_WRAP + STYLE_NORMAL共同模式下，生效
 mTabLayout.setTabIndicatorMarginTop(20);
+// attr app:tabIndicatorMarginTop="0dp"
 
 //6.设置指示器的圆角
 //attr中tabIndicatorCornerRadius设置STYLE_BLOCK / STYLE_NORMAL 样式下的圆角
 
 //7.固定指示器在顶部
 mTabLayout.setIndicatorFixedTop(true);
-//或者 在 xml 中使用 attr tabIndicatorFixedTop 
+// attr app:tabIndicatorFixedTop="true"
 
 //8.修改Tab Icon 颜色
 mTabLayout.setTabIconTintColors(colorStateList);
-// attr tabIconTint
+// attr app:tabIconTint="#00000000"
 
 //9.Tab 中 icon 和 text 的间距
 mTabLayout.setTabTextIconGap(24);
+// attr app:tabTextIconGap="8dp"
 
 //10.显示红点
 mTabLayout.showTips(0, R.drawable.ic_oval_tips);
