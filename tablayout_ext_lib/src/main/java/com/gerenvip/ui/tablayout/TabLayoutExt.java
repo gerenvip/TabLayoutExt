@@ -52,7 +52,6 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.gerenvip.ui.tablayout.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -334,7 +333,7 @@ public class TabLayoutExt extends HorizontalScrollView {
      */
     private boolean mTabFixedAlign = !MODE_FIXED_ALIGN;
 
-    private int mTextIconGap = DEFAULT_GAP_TEXT_ICON;
+    private int mTextIconGap;
 
     /**
      * 是否固定指示器宽度,如果 为 true ,不管 在{@link #TAB_INDICATOR_FILL} 或{@link #TAB_INDICATOR_WRAP}模式下，都生效
@@ -444,7 +443,7 @@ public class TabLayoutExt extends HorizontalScrollView {
         mIndicatorAdditionalPadding = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabIndicatorAdditionalPadding, 0);
         mTabIndicatorMarginTop = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabIndicatorMarginTop, 0);
         mTabIndicatorMarginBottom = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabIndicatorMarginBottom, 0);
-        mTextIconGap = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabTextIconGap, DEFAULT_GAP_TEXT_ICON);
+        mTextIconGap = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabTextIconGap, dpToPx(DEFAULT_GAP_TEXT_ICON));
         mTabIndicatorWidthFixed = a.getBoolean(R.styleable.TabLayoutExt_tabIndicatorWidthFixed, false);
         mTabIndicatorFixedWidth = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabIndicatorFixedWidth, 0);
         mTabIndicatorCornerRadius = a.getDimension(R.styleable.TabLayoutExt_tabIndicatorCornerRadius, 0);
@@ -2789,7 +2788,7 @@ public class TabLayoutExt extends HorizontalScrollView {
                 int margin = 0;
                 if (hasText && iconView.getVisibility() == VISIBLE) {
                     // If we're showing both text and icon, add some margin bottom to the icon
-                    margin = dpToPx(mTextIconGap);
+                    margin = mTextIconGap;
                 }
                 if (mTabOrientation == TAB_ORIENTATION_HORIZONTAL) {
                     if (margin != lp.rightMargin) {
