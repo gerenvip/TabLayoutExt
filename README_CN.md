@@ -143,4 +143,24 @@ mTabLayout.setTipsVisible(0, false);
 
 ```
 
-## 集成方式
+## 集成方式   
+
+使用 `jcenter`   
+```groovy
+ implementation 'com.suapp:tablayout_ext:1.0.1'
+```
+或者使用 jitpack  
+
+在 工程目录下 `build.gradle` 中添加   
+
+```groovy
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+app module 中 添加如下依赖   
+```groovy
+implementation 'com.github.gerenvip:TabLayoutExt:5ffcf5517f'
+```
