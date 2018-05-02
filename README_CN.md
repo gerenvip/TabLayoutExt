@@ -1,7 +1,9 @@
 # TabLayoutExt  
 
 ## 简介:  
-基于 `Android design` 中的 `TabLayout` 扩展    
+基于 `Android design` 中的 `TabLayout` 扩展   
+ ![](https://github.com/gerenvip/TabLayoutExt/blob/master/demo.gif?raw=true)
+   
 #### 主要功能:  
 
 ##### 1. 指示器扩展
