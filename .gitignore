@@ -8,5 +8,6 @@
 /captures
 .externalNativeBuild
 .idea/
-/nexus-scripts
-./nexus-scripts
+/scripts
+/nexus_scripts
+/tablayout_ext_lib/local.properties

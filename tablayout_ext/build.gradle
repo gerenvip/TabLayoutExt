@@ -1,7 +1,5 @@
 apply plugin: 'com.android.library'
 
-//apply from: "${rootProject.projectDir}/nexus-scripts/upload.gradle"
-
 def getConfigProperty(String configName) {
     def versionPropsFile = file('config.properties')
     def versionProps = new Properties()
@@ -34,6 +32,20 @@ android {
         }
     }
 
+    lintOptions {
+        disable 'MissingTranslation'
+        disable 'ExtraTranslation'
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+        options.addStringOption('charSet', 'UTF-8')
+    }
 }
 
 dependencies {
@@ -41,3 +53,7 @@ dependencies {
 
     implementation "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
 }
+//需要打包发布时 取消注释
+//apply from: "${rootProject.projectDir}/scripts/bintrayUpload.gradle"
+//publish to nexus
+apply from: "${rootProject.projectDir}/nexus_scripts/nexusUpload.gradle"

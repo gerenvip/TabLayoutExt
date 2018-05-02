@@ -1,1 +1,1 @@
-include ':app', ':tablayout_ext_lib'
+include ':app', ':tablayout_ext'
