@@ -24,6 +24,6 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:1.0.2"
     implementation "com.android.support:design:$ANDROID_SUPPORT_VERSION"
     implementation project(':tablayout_ext')
-//    implementation "com.suapp:tabLayout_ext:1.0"
+//    implementation "com.suapp:tablayout_ext:1.0.1"
 //    implementation 'com.github.gerenvip:TabLayoutExt:5ffcf5517f'
 }
