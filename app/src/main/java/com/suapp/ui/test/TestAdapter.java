@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class TestAdapter extends FragmentPagerAdapter {
 
-    private static final int COUNT = 8;
+    private static final int COUNT = 6;
     private List<TestFragment> fragments = new ArrayList<>();
 
     public TestAdapter(FragmentManager fm) {

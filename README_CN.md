@@ -149,7 +149,7 @@ mTabLayout.setTipsVisible(0, false);
 ```groovy
  implementation 'com.suapp:tablayout_ext:1.0.1'
 ```
-或者使用 jitpack  
+或者使用 `jitpack` 
 
 在 工程目录下 `build.gradle` 中添加   
 
@@ -160,7 +160,7 @@ allprojects {
     }
 }
 ```
-app module 中 添加如下依赖   
+`app module` 中 添加如下依赖   
 ```groovy
 implementation 'com.github.gerenvip:TabLayoutExt:5ffcf5517f'
 ```

@@ -3186,6 +3186,7 @@ public class TabLayoutExt extends HorizontalScrollView {
             updateIndicatorPosition();
             //重置 指示器的 top and bottom
             resetIndicatorTopAndBottom();
+            postInvalidate();
         }
 
         private void resetIndicatorTopAndBottom() {

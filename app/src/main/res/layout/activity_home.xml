@@ -6,6 +6,161 @@
     android:layout_height="match_parent"
     tools:context="com.suapp.ui.tablayout.HomeActivity">
 
+    <com.gerenvip.ui.tablayout.TabLayoutExt
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabBackground="?attr/selectableItemBackgroundBorderless"
+        app:tabGravity="fill"
+        app:tabIconTint="#8B658B"
+        app:tabIndicatorStyle="none"
+        app:tabMode="fixed"
+        app:tabOrientation="vertical"
+        app:tabSelectedIconTint="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary">
+
+        <com.gerenvip.ui.tablayout.TabItemExt
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu1" />
+
+        <com.gerenvip.ui.tablayout.TabItemExt
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu2" />
+
+        <com.gerenvip.ui.tablayout.TabItemExt
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu3" />
+
+        <com.gerenvip.ui.tablayout.TabItemExt
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu4" />
+    </com.gerenvip.ui.tablayout.TabLayoutExt>
+
+    <com.gerenvip.ui.tablayout.TabLayoutExt
+        android:id="@+id/tab_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+        app:tabGravity="center"
+        app:tabIconTint="#00000000"
+        app:tabIndicatorStyle="none"
+        app:tabMode="fixed"
+        app:tabOrientation="horizontal"
+        app:tabSelectedIconTint="#ff0000"
+        app:tabSelectedTextColor="#ff0000">
+
+        <com.gerenvip.ui.tablayout.TabItemExt
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu1" />
+
+        <com.gerenvip.ui.tablayout.TabItemExt
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu2" />
+
+        <com.gerenvip.ui.tablayout.TabItemExt
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu3" />
+
+    </com.gerenvip.ui.tablayout.TabLayoutExt>
+
+    <com.gerenvip.ui.tablayout.TabLayoutExt
+        android:id="@+id/tab_layout_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#97FFFF"
+        app:indicatorMode="fill"
+        app:tabIndicatorAdditionalPadding="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_2"
+        app:tabContentStart="0dp"
+        app:tabIndicatorStyle="normal"
+        app:tabMode="scrollable" />
+
+    <com.gerenvip.ui.tablayout.TabLayoutExt
+        android:id="@+id/tab_layout_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C1FFC1"
+        app:indicatorMode="wrap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_3"
+        app:tabIndicatorStyle="normal"
+        app:tabMode="scrollable" />
+
+    <com.gerenvip.ui.tablayout.TabLayoutExt
+        android:id="@+id/tab_layout_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        app:indicatorMode="fill"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_4"
+        app:tabContentStart="0dp"
+        app:tabGravity="center"
+        app:tabIconTint="#00000000"
+        app:tabIndicatorAdditionalPadding="0dp"
+        app:tabIndicatorBlockStyleHorizontalMargin="0dp"
+        app:tabIndicatorCornerRadius="0dp"
+        app:tabIndicatorDrawable="@mipmap/ic_indicator_1"
+        app:tabIndicatorFixedTop="true"
+        app:tabIndicatorFixedWidth="70dp"
+        app:tabIndicatorHeight="2dp"
+        app:tabIndicatorMarginTop="4dp"
+        app:tabIndicatorStyle="normal"
+        app:tabIndicatorWidthFixed="true"
+        app:tabMode="scrollable"
+        app:tabOrientation="vertical" />
+
+    <com.gerenvip.ui.tablayout.TabLayoutExt
+        android:id="@+id/tab_layout_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFE0"
+        app:indicatorMode="fill"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_5"
+        app:tabContentStart="0dp"
+        app:tabGravity="center"
+        app:tabIconTint="#00000000"
+        app:tabIndicatorDrawable="@mipmap/ic_indicator_1"
+        app:tabIndicatorStyle="drawable"
+        app:tabMode="scrollable" />
+
+    <com.gerenvip.ui.tablayout.TabLayoutExt
+        android:id="@+id/tab_layout_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CDCDC1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_6"
+        app:tabIndicatorBlockStyleHorizontalMargin="2dp"
+        app:tabIndicatorCornerRadius="16dp"
+        app:tabIndicatorFixedWidth="80dp"
+        app:tabIndicatorStyle="block"
+        app:tabIndicatorColor="#80000000"
+        app:tabIndicatorWidthFixed="false"
+        app:tabMinWidth="74dp"
+        app:tabMode="scrollable"
+        app:tabOrientation="vertical" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
@@ -14,54 +169,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.gerenvip.ui.tablayout.TabLayoutExt
-            android:id="@+id/tab_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            app:indicatorMode="fill"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tabContentStart="0dp"
-            app:tabGravity="center"
-            app:tabIconTint="#00000000"
-            app:tabIndicatorAdditionalPadding="0dp"
-            app:tabIndicatorBlockStyleHorizontalMargin="0dp"
-            app:tabIndicatorCornerRadius="0dp"
-            app:tabIndicatorDrawable="@mipmap/ic_indicator_1"
-            app:tabIndicatorFixedTop="false"
-            app:tabIndicatorFixedWidth="80dp"
-            app:tabIndicatorHeight="2dp"
-            app:tabIndicatorMarginTop="0dp"
-            app:tabIndicatorStyle="normal"
-            app:tabIndicatorWidthFixed="false"
-            app:tabMinWidth="74dp"
-            app:tabMode="scrollable"
-            app:tabOrientation="vertical">
-
-            <!--<TabItemExtmExt-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="New Tab" />-->
-
-            <!--<TabItemExtmExt-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="New Tab" />-->
-
-            <!--<TabItemExtmExt-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="New Tab" />-->
-
-            <!--<TabItemExtmExt-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="New Tab" />-->
-        </com.gerenvip.ui.tablayout.TabLayoutExt>
-    </android.support.v4.view.ViewPager>
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_7" />
 
 </android.support.constraint.ConstraintLayout>

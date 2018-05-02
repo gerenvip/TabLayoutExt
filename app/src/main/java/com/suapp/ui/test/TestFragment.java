@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.suapp.ui.tablayout.HomeActivity;
 import com.suapp.ui.tablayout.R;
-import com.gerenvip.ui.tablayout.TabLayoutExt;
 
 /**
  * @author wangwei on 2018/4/4.
@@ -42,11 +41,12 @@ public class TestFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mText = view.findViewById(R.id.text);
+        View msgView = view.findViewById(R.id.msg);
 
         Bundle arguments = getArguments();
         String page = arguments.getString(PAGE_KEY);
         mText.setText(page);
-        mText.setOnClickListener(new View.OnClickListener() {
+        msgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentActivity activity = getActivity();
@@ -56,7 +56,6 @@ public class TestFragment extends Fragment {
 
             }
         });
-        TabLayoutExt ext = new TabLayoutExt(this.getContext());
     }
 
     public String getPage() {
