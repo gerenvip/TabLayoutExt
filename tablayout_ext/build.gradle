@@ -21,7 +21,7 @@ android {
         minSdkVersion MIN_SDK_VERSION as int
         targetSdkVersion TARGET_SDK_VERSION as int
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.1"
         consumerProguardFiles 'proguard-rules.pro'
     }
 
@@ -56,4 +56,4 @@ dependencies {
 //需要打包发布时 取消注释
 //apply from: "${rootProject.projectDir}/scripts/bintrayUpload.gradle"
 //publish to nexus
-apply from: "${rootProject.projectDir}/nexus_scripts/nexusUpload.gradle"
+//apply from: "${rootProject.projectDir}/nexus_scripts/nexusUpload.gradle"
