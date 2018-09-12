@@ -165,5 +165,5 @@ allprojects {
 ```
 `app module` 中 添加如下依赖   
 ```groovy
-implementation 'com.github.gerenvip:TabLayoutExt:5ffcf5517f'
+implementation 'com.github.gerenvip:TabLayoutExt:1.0.1'
 ```
