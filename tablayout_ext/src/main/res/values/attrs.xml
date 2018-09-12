@@ -41,11 +41,13 @@
         <attr name="tabContentStart" format="dimension" />
         <!--每个tab 的背景色-->
         <attr name="tabBackground" format="reference" />
-        <attr name="tabMode">
+
+        <!--与design 包的 TabLayout 有属性冲突问题,故将 tabMode 修改为 tab_mode; tabGravity 修改为 tag_gravity-->
+        <attr name="tab_mode">
             <enum name="scrollable" value="0" />
             <enum name="fixed" value="1" />
         </attr>
-        <attr name="tabGravity">
+        <attr name="tab_gravity">
             <enum name="fill" value="0" />
             <enum name="center" value="1" />
         </attr>

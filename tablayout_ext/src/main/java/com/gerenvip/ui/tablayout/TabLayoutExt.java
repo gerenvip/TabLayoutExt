@@ -436,8 +436,8 @@ public class TabLayoutExt extends HorizontalScrollView {
                 INVALID_WIDTH);
         mTabBackgroundResId = a.getResourceId(R.styleable.TabLayoutExt_tabBackground, 0);
         mContentInsetStart = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabContentStart, 0);
-        mMode = a.getInt(R.styleable.TabLayoutExt_tabMode, MODE_FIXED);
-        mTabGravity = a.getInt(R.styleable.TabLayoutExt_tabGravity, GRAVITY_FILL);
+        mMode = a.getInt(R.styleable.TabLayoutExt_tab_mode, MODE_FIXED);
+        mTabGravity = a.getInt(R.styleable.TabLayoutExt_tab_gravity, GRAVITY_FILL);
         mIndicatorMode = a.getInt(R.styleable.TabLayoutExt_indicatorMode, TAB_INDICATOR_FILL);
         mTabOrientation = a.getInt(R.styleable.TabLayoutExt_tabOrientation, TAB_ORIENTATION_VERTICAL);
         mIndicatorAdditionalPadding = a.getDimensionPixelSize(R.styleable.TabLayoutExt_tabIndicatorAdditionalPadding, 0);
