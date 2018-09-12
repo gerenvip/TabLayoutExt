@@ -150,7 +150,7 @@ mTabLayout.setTipsVisible(0, false);
 
 使用 `jcenter`   
 ```groovy
- implementation 'com.suapp:tablayout_ext:1.0.1'
+ implementation 'com.suapp:tablayout_ext:1.0.2'
 ```
 或者使用 `jitpack` 
 
