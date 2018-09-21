@@ -1,4 +1,5 @@
 # TabLayoutExt  
+[![](https://www.jitpack.io/v/gerenvip/TabLayoutExt.svg)](https://www.jitpack.io/#gerenvip/TabLayoutExt)[ ![Download](https://api.bintray.com/packages/gerenvip/maven/TabLayoutExt/images/download.svg?version=1.0.2) ](https://bintray.com/gerenvip/maven/TabLayoutExt/1.0.2/link)
 
 ## 简介:  
 基于 `Android design` 中的 `TabLayout` 扩展   
