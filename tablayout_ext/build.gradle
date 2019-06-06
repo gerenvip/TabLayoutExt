@@ -11,7 +11,7 @@ def COMPILE_SDK_VERSION = hasProperty('COMPILE_SDK_VERSION') ? property('COMPILE
 def BUILD_TOOLS_VERSION = hasProperty('BUILD_TOOLS_VERSION') ? property('BUILD_TOOLS_VERSION') : getConfigProperty('BUILD_TOOLS_VERSION')
 def MIN_SDK_VERSION = hasProperty('MIN_SDK_VERSION') ? property('MIN_SDK_VERSION') : getConfigProperty('MIN_SDK_VERSION')
 def TARGET_SDK_VERSION = hasProperty('TARGET_SDK_VERSION') ? property('TARGET_SDK_VERSION') : getConfigProperty('TARGET_SDK_VERSION')
-def ANDROID_SUPPORT_VERSION = hasProperty('ANDROID_SUPPORT_VERSION') ? property('ANDROID_SUPPORT_VERSION') : getConfigProperty('ANDROID_SUPPORT_VERSION')
+def X_SUPPORT_VERSION = hasProperty('X_SUPPORT_VERSION') ? property('X_SUPPORT_VERSION') : getConfigProperty('X_SUPPORT_VERSION')
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
@@ -51,7 +51,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation "com.android.support:appcompat-v7:$ANDROID_SUPPORT_VERSION"
+    implementation "androidx.appcompat:appcompat:$X_SUPPORT_VERSION"
+    implementation "androidx.viewpager:viewpager:1.0.0"
 }
 //需要打包发布时 取消注释
 //apply from: "${rootProject.projectDir}/scripts/bintrayUpload.gradle"

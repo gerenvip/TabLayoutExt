@@ -8,10 +8,6 @@ import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatTextView;
 import android.text.BoringLayout;
 import android.text.Layout;
 import android.util.AttributeSet;
@@ -19,6 +15,11 @@ import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 
 /**
  * <a href="https://github.com/H07000223/FlycoTabLayout/blob/master/FlycoTabLayout_Lib/src/main/java/com/flyco/tablayout/widget/MsgView.java">
